@@ -10,6 +10,7 @@ function App3() {
     event.preventDefault();
     console.log(toDo);
   };
+  
   console.log(toDo);
   return (
     <div>

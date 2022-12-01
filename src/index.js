@@ -3,6 +3,6 @@ import ReactDOM from "react-dom/client";
 //import './index.css';
 import App from "./App";
 import App3 from "./App3";
-
+import Coin_Tracker from "./Coin_Tracker";
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+root.render(<Coin_Tracker />);
