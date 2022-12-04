@@ -8,6 +8,7 @@ function Home()
     const getMovies = async () => {
         const response = await fetch("https://yts.mx/api/v2/list_movies.json?minimum_rating=8.5&sort_by=year"); // await을 사용하므로 동기식. 처리될때까지 기다림.
         const json = await response.json();
+        const may = await response.ok();
         setMovies(json.data.movies);
         setLoading(false);
     }
