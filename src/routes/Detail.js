@@ -9,11 +9,11 @@ function Detail()
         const json = await(await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)).json()
         console.log(json);
     };
+
     useEffect(()=>{
         getMovie();
-    },);
+    },); //[] 안넣고?
     
-    return( <h1>Detail</h1>);
+    return(<h1>Detail</h1>);
 }
-
 export default Detail;
