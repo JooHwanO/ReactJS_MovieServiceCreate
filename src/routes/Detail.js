@@ -3,21 +3,20 @@ import { useParams } from "react-router-dom";
 
 function Detail()
 {
-    const [Item, setItem] = useState();
+    const [Item, setItem] = useState([]); //초기화 중요
     const {id} = useParams();
-    console.log(id);
-    const getMovie = (async()=>{
-        const json= await (await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id= ${id}`)).json();
+    const getMovie = useCallback(async ()=>{
+        const response= await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
+        const json = await response.json();
+        setItem(json.data.movie);
         console.log(json);
-        setItem(json);
-    });
+    },[id]);
 
     useEffect(()=>{
+         // eslint-disable-next-line react-hooks/exhaustive-deps
         getMovie();
-        //워링무시
-// eslint-disable-next-line react-hooks/exhaustive-deps
-    },[]); 
+    },[getMovie]); 
     
-    return(<h1>{Item.data.movie.title}</h1>);
+    return(<h1>{Item.title}</h1>);
 }
 export default Detail;
