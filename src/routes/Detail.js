@@ -17,6 +17,9 @@ function Detail()
         getMovie();
     },[getMovie]); 
     
-    return(<h1>{Item.title}</h1>);
+    return(<div>
+        <h1>{Item.title}</h1>
+        
+        </div>);
 }
 export default Detail;
