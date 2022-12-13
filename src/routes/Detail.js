@@ -9,7 +9,8 @@ function Detail()
         const response= await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
         const json = await response.json();
         setItem(json.data.movie);
-        console.log(json);
+        // console.log(json);
+        console.log(typeof(json.data.movie));
     },[id]);
 
     useEffect(()=>{
@@ -17,9 +18,10 @@ function Detail()
         getMovie();
     },[getMovie]); 
     
-    return(<div>
-        <h1>{Item.title}</h1>
-        
+    return(
+        <div>
+            { Item.map(item=>(<Detail title={item.title}/>))}
+
         </div>);
 }
 export default Detail;

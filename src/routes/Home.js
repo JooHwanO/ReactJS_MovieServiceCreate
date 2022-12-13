@@ -12,6 +12,7 @@ function Home()
         const json = await response.json();
         setMovies(json.data.movies);
         setLoading(false);
+        console.log(typeof(json.data.movies));
     }
 
 
