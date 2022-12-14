@@ -13,6 +13,7 @@ function Home()
         setMovies(json.data.movies);
         setLoading(false);
         console.log(typeof(json.data.movies));
+        console.log(json.data.movies);
     }
 
 
