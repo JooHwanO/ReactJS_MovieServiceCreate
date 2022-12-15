@@ -69,3 +69,15 @@
 
     margin: 0;
 }
+/* ------------------------ */
+.main_div
+{
+    position: absolute;
+}
+
+.main_div img{
+    position: absolute;
+    z-index: -1;
+    width:1920px;
+    height: 900px;
+}

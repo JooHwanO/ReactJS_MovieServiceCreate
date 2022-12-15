@@ -2,6 +2,7 @@ import { useState,useEffect, useCallback } from "react";
 import { useParams } from "react-router-dom";
 import MovieDetail from "../components/MovieDetail";
 
+import styles from "../css/Movie.module.css"
 function Detail()
 {
 
