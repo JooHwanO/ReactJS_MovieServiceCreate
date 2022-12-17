@@ -16,7 +16,7 @@ function Movie({ id, coverImg, title, summary, genres }) {
                     </Link>
                 </span>
                 
-                <p>{summary.length >398 ? `${summary.slice(0,398)}...`: summary.length <= 0 ?<span style={{padding:"20px"}}>No-Contents</span>:summary}</p>
+                <p>{summary.length >398 ? `${summary.slice(0,398)}...`: summary.length <= 0 ?<span>No-Contents</span>:summary}</p>
                 <h3>🎬 Category</h3>
                 <ul>
                     {genres == null ? ("") : genres.map((genres) => <li key={genres}>▷ {genres}</li>)}

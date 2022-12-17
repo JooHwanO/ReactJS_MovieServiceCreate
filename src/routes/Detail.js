@@ -30,7 +30,7 @@ function Detail()
     
     return(
         <div>
-            {loading ? "Loading" : <div> {(<MovieDetail title={Item.title} backImg={Item.background_image} desFull= {Item.description_full}/>)}</div> }
+            {loading ? "Loading" : <div> {(<MovieDetail title={Item.title} backImg={Item.background_image} desFull= {Item.description_full} mainimg={Item.large_cover_image}/>)}</div> }
         </div>);
 }
 
