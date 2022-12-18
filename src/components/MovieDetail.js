@@ -10,6 +10,7 @@ function MovieDetail({ title, backImg, desFull, mainimg}) {
                 <h2>{desFull}</h2>
                 <img src={mainimg} alt=""></img>
             </div>
+            
         </div>
     )
 }

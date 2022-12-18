@@ -79,7 +79,7 @@
     display: flex;
 }
 
-.main_div img{
+.main_div>img{
     position: absolute;
     z-index: -1;
     width: 100%;
@@ -96,17 +96,13 @@
     position: relative;
     width: 90%;
     height: 784px; /*90%*/
-    background-color: rgb(255, 255, 255,0.5);    
     border-radius: 40px;
+    background-color: rgba(255,255,255,0.5);
     padding: 15px;
     margin: auto;
 }
-.detail_div::after
-{
 
-}
 .detail_div img{
-    width:200px;
-    height: 200px;
-    opacity: 1;
+    width:400px;
+    height: 400px;
 }
