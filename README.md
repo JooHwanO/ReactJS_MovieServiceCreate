@@ -3,5 +3,5 @@
 
 |제목|사이트|
 |---|---|
-|영화 정보제공 |<a href="https://joohwano.github.io/ReactJS_MovieServiceCreate/"></a>|
+|영화 정보제공 |<a href="https://joohwano.github.io/ReactJS_MovieServiceCreate/">Demo</a>|
 
