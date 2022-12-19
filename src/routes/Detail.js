@@ -1,7 +1,7 @@
 import { useState,useEffect, useCallback } from "react";
 import { useParams } from "react-router-dom";
 import MovieDetail from "../components/MovieDetail";
-
+import Loading from "../components/Loading";
 // import styles from "../css/Movie.module.css"
 function Detail()
 {
@@ -30,7 +30,7 @@ function Detail()
     
     return(
         <div>
-            {loading ? "Loading" : <div> {(<MovieDetail title={Item.title} backImg={Item.background_image} desFull= {Item.description_full} mainimg={Item.large_cover_image}/>)}</div> }
+            {loading ? <Loading/> : <div> {(<MovieDetail title={Item.title} backImg={Item.background_image} desFull= {Item.description_full} mainimg={Item.large_cover_image} Url={Item.url} rating={Item.rating} runtime={Item.runtime} date_upload={Item.date_uploaded}/>)}</div> }
         </div>);
 }
 
